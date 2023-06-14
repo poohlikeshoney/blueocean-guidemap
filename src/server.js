@@ -6,7 +6,7 @@ import { fileURLToPath } from "url";
 
 
 const app = express();
-const PORT = 4000;
+const PORT = process.env.PORT;
 const __dirname = fileURLToPath(new URL(".", import.meta.url)); 
 
 const logger = morgan('dev');
