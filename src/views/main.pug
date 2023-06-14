@@ -1,0 +1,74 @@
+extends base/layout.pug
+
+block custom_css 
+    link(rel="stylesheet", href='/static/css/main.css')
+block content   
+    div(class="maig_bg_box")
+        div(class="overlay")
+        img(src="/static/img/main_bg.jpg", alt="배경이미지, 산에서 자라는 과실나무들.", class="main_bg_img")
+        div(class="text_box")
+            h4 Blue Ocean Residence Hotel
+            h1 GUIDE MAP
+            a(target="_blank", href="https://www.google.co.kr/maps/place/%EB%B8%94%EB%A3%A8%EC%98%A4%EC%85%98+%EB%A0%88%EC%A7%80%EB%8D%98%EC%8A%A4+%ED%98%B8%ED%85%94/data=!3m1!4b1!4m9!3m8!1s0x357b831e67c49c7b:0x6517c353a4fffbf0!5m2!4m1!1i2!8m2!3d37.4872679!4d126.5635705!16s%2Fg%2F11r4wssddm?entry=ttu",class='row go_to_hotel_btn')
+                div Find your way to the HOTEL
+                img(class="google_map_icon", src='/static/img/icons/google_maps_icon.png', alt='구글 맵 아이콘')
+    div(class='card_bg')
+        div(class='card_box')
+            a(href="/restaurant", class='card')
+                div
+                    p( class="title") Restaurant
+                    p(class="kr_desc") 레스토랑/카페
+                div(class="row")
+                    img(class="icon", src="/static/img/icons/restaurant.png", alt="레스토랑 아이콘")
+                    img(class="arrow", src="/static/img/icons/arrow.png", alt="화살표")
+            a(href="/convenience_store", class='card')
+                div
+                    p(class="title") Convenience store
+                    p(class="kr_desc") 편의점
+                div(class="row")
+                    img(class="icon", src="/static/img/icons/convenience_store.png", alt="편의점 아이콘")
+                    img(class="arrow", src="/static/img/icons/arrow.png", alt="화살표")
+            a(href="/pharmacy", class='card')
+                div
+                    p(class="title") Pharmacy
+                    p(class="kr_desc") 약국
+                div(class="row")
+                    img(class="icon", src="/static/img/icons/pharmacy.png", alt="약국 아이콘")
+                    img(class="arrow", src="/static/img/icons/arrow.png", alt="화살표")
+            a(href="/hospital", class='card')
+                div
+                    p(class="title") Hospital
+                    p(class="kr_desc") 병원
+                div(class="row")
+                    img(class="icon", src="/static/img/icons/hospital.png", alt="병원 아이콘")
+                    img(class="arrow", src="/static/img/icons/arrow.png", alt="화살표")
+            a(href="/household_goods_store", class='card')
+                div
+                    p(class="title") Household goods store
+                    p(class="kr_desc") 생활용품 판매점
+                div(class="row")
+                    img(class="icon", src="/static/img/icons/household_goods_store.png", alt="생활용품 판매점 아이콘")
+                    img(class="arrow", src="/static/img/icons/arrow.png", alt="화살표")
+            a(href="/coin_laundry", class='card')
+                div
+                    p( class="title") Coin Laundry
+                    p(class="kr_desc") 코인세탁소
+                div(class="row")
+                    img(class="icon", src="/static/img/icons/coin_laundry.png", alt="코인세탁소 아이콘")
+                    img(class="arrow", src="/static/img/icons/arrow.png", alt="화살표")
+            a(href="/exchange", class='card')
+                div
+                    p(class="title") Exchange
+                    p(class="kr_desc") 환전소
+                div(class="row")
+                    img(class="icon", src="/static/img/icons/exchange.png", alt="환전소 아이콘")
+                    img(class="arrow", src="/static/img/icons/arrow.png", alt="화살표")
+            a(href="/tourist", class='card')
+                div
+                    p(class="title") Tourist
+                    p(class="kr_desc") 관광지
+                div(class="row")
+                    img(class="icon", src="/static/img/icons/tourist.png", alt="관광지 아이콘")
+                    img(class="arrow", src="/static/img/icons/arrow.png", alt="화살표")
+
+            

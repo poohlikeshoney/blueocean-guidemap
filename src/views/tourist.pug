@@ -1,0 +1,20 @@
+extends base/layout.pug
+include mixins/list_item.pug
+
+block custom_css
+    link(rel="stylesheet", href='/static/css/sub_page.css')
+
+block content
+    div(class="sub_conatiner")
+            div(class="content_box sub_title_box")
+                div
+                    img(src="/static/img/icons/tourist.png", alt="관광지 아이콘", class="icon")
+                div
+                    p(class="sub_title") Tourist
+                    p(class="kr_desc") 관광지
+            div(class="border")
+            div(class="content_box list_item_box")
+                //- each item in coinLaundryData
+                //-     +list(item)
+                //- else
+                //-     p(class="no_data") Sorry, Not Found :/

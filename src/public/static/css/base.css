@@ -1,0 +1,204 @@
+@import url('https://webfontworld.github.io/TheJamsil/TheJamsil.css');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+
+/* GLOBAL STYLE */
+body{
+    font-family: 'Pretendard', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    background-color: #f1f1f1;;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+ul,ol{
+    list-style-type: none;
+}
+button{
+    all : unset;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+img{
+    max-width: 100%;
+}
+
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+.container{
+    max-width:1200px;
+    height: 100vh;
+    margin: 0 auto;
+}
+header{
+    z-index: 100;
+    width: 100%;
+    height: 90px;
+    max-width:1200px;
+    left: 50%;
+    transform:translateX(-50%);
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+    position: fixed;
+    background-color: transparent;
+    transition: background-color 250ms ease-in-out;
+}
+header.dark {
+  background-color: rgba(16,36,17,1);
+  border-bottom: none;
+}
+.logo_box{
+    width: 90px;
+    position:absolute;
+    left: 50%;
+    transform:translateX(-50%);
+}
+.hamburger_menu{
+    font-size: 24px;
+    position:absolute;
+    right: 32px;
+    color: white;
+    cursor: pointer;
+}
+footer{
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 32px 40px;
+    color: #999;
+}
+.arrow_up {
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    margin-right: 2rem;
+    bottom: 2rem;
+    width: 30px;
+    height: 60px;
+    border-radius: 15px;
+    background: #2F6633;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.arrow_up.active {
+    visibility: visible;
+    opacity: 1;
+}
+.arrow_up i {
+    color: #fff;
+}
+/* Sidebar Navigation */
+.sidebar{
+    width:360px;
+    z-index: 100;
+    position:fixed;
+    top:0;
+    bottom:0;
+    right:0;
+    background: white;
+    transition: transform 300ms ease-in-out;
+    transform: translateX(100vw);
+    padding: 30px;
+    visibility: hidden;
+}
+.sidebar.active{
+    visibility: visible;
+    transform: translateX(0);
+}
+.sidebar_menu{
+    height: 100%;
+    overflow: auto;
+}
+.sidebar_menu .close_icon{
+    color: #999;
+    font-size: 24px;
+    position:absolute;
+    right: 16px;
+    top: 16px;
+    cursor: pointer;
+}
+.sidebar_menu .category{
+    padding-bottom: 16px;
+    border-bottom: 1px solid #2F6633;
+    margin-bottom: 16px;
+}
+.sidebar_menu .category p{
+    color: #2F6633;
+    font-size:20px;
+    margin-left: 8px;
+    font-weight: 500;
+}
+.sidebar_menu .category .category_icon{
+    width: 32px;
+}
+.sidebar_menu .menu_item{
+    padding: 8px 0;
+}
+.sidebar_menu .menu_item .flex{
+    align-items: center;
+}
+.sidebar_menu .menu_item .square{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #2F6633;
+    margin-right: 8px;
+}
+.sidebar_menu .menu_item .title{
+    font-size: 20px;
+    font-weight: 500;
+    color: #2F6633;
+}
+.sidebar_menu .menu_item .kr_desc{
+    font-size:14px;
+    color: #aaa;
+    margin-left: 14px;
+    margin-top: 6px;
+}
+
+@media screen and (max-width:480px) {
+    .sidebar{
+        width:100%;
+    }
+    .sidebar_menu .menu_item .title{
+        font-size: 16px;
+    }
+    .sidebar_menu .category .category_icon{
+        width: 26px;
+    }
+    header{
+        height: 60px;
+    }
+    .logo_box{
+        width: 56px;
+    }
+    .hamburger_menu{
+        right: 20px;
+    }
+    footer{
+        font-size: 14px;
+    }
+    .arrow_up{
+        margin-right: 1rem;
+        bottom: 1rem;
+    }
+}
