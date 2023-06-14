@@ -1,4 +1,4 @@
-import banner_img from "../img/bg.png";
+
 
 export function MainBeanner() {
   return (

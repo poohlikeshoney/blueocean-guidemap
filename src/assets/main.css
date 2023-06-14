@@ -1,0 +1,207 @@
+.maig_bg_box{
+    width: 100%;
+    padding-top: 50%;
+    min-height: 60%;
+    overflow: hidden;
+    position: relative;
+}
+.maig_bg_box .overlay{
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 60vh;
+    object-fit: cover;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1;
+}
+.maig_bg_box .main_bg_img{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 60vh;
+    object-fit: cover;
+}
+.text_box{
+    position:absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index:50;
+}
+.text_box h4{
+    font-size: 30px;
+    font-weight: 200;
+    margin-bottom: 6px;
+}
+.text_box h1{
+    font-size:62px;
+    font-weight: 500;
+}
+.go_to_hotel_btn{
+    justify-content: center;
+    text-align:center;
+    background-color: #2F6633;
+    color: white;
+    width: 370px;
+    height: 56px;
+    border-radius: 56px;
+    margin: 36px auto 0;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(5px);
+}
+.go_to_hotel_btn:hover{
+    transform: translateY(0);
+    box-shadow: 1px 2px 12px 0 rgba(42, 109, 48, 0.4);
+}
+.google_map_icon{
+    margin-left: 8px;
+    width: 32px;
+    vertical-align: middle;
+}
+.card_bg{
+    background-color: white;
+}
+.card_box{
+    max-width: 940px;
+    padding: 50px 0;
+    margin: 0 auto ;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.card_box .card{
+    background-color: white;
+    min-height: 210px;
+    padding: 24px;
+    border-radius: 24px;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.13);
+    transition: box-shadow 300ms ease-in-out;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card_box .card:hover{
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.3);
+}
+.card_box .card .title{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.card_box .card .kr_desc{
+    color: #aaa;
+    font-weight: 500;
+}
+.card_box .card .icon{
+    width: 60px;
+}
+.card_box .card .arrow{
+    width: 60px;
+}
+.card_box .card .row{
+    align-items: end;
+}
+
+@media screen and (max-width:1028px) {
+    .text_box{
+        top: 60%;
+    }
+    .card_box{
+        grid-template-columns: repeat(3, 1fr);
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .card_box .card .title{
+        font-size:20px;
+    }
+}
+@media screen and (max-width:768px) {
+    .text_box h4{
+        font-size:22px;
+    }
+    .text_box h1{
+        font-size: 52px;
+    }
+    .go_to_hotel_btn{
+        width:280px;
+        height: 52px;
+        font-size: 16px;
+    }
+    .card_box{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:576px){
+    .card_box{
+        padding: 30px;
+    }
+    .card_box .card .title{
+        font-size:18px;
+    }
+    .card_box .card .kr_desc{
+        font-size:14px;
+    }
+}
+@media screen and (max-width:480px){
+    .text_box{
+        top: 55%;
+    }
+    .text_box h4{
+        font-size: 18px;
+    }
+    .text_box h1{
+        font-size: 42px;
+    }
+    .go_to_hotel_btn{
+        width: 80vw;
+        height: 52px;
+        font-size: 16px;
+    }
+    .google_map_icon{
+        width: 26px;
+    }
+    .card_box{
+        padding:16px;
+        gap: 16px;
+    }
+    .card_box .card{
+        padding: 20px;
+        min-height: 176px;
+    }
+    .card_box .card .title{
+        font-size: 17px;
+        font-weight: 600;
+    }
+    .card_box .card .icon{
+        width: 50px;
+    }
+    .card_box .card .arrow{
+        width: 48px;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .go_to_hotel_btn{
+        width: 90vw;
+    }
+    .card_box{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .card_box .card .title{
+        font-size: 18px;
+    }
+    .card_box .card .icon{
+        width: 60px;
+    }
+    .card_box .card .arrow{
+        width: 80px;
+    }
+}

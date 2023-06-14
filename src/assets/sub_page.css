@@ -1,0 +1,159 @@
+header{
+    background-color: #2F6633;
+}
+.sub_conatiner{
+    padding-top: 90px;
+    background-color: white;
+}
+.content_box{
+    max-width: 940px;
+    margin: 0 auto;
+}
+.border{
+    border: 4px solid #f2f2f2;
+}
+.sub_title_box{
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 30px 20px;
+}
+.sub_title_box .sub_title{
+    font-size: 34px;
+    font-weight: 600;
+    color: #2f6633;
+    margin-bottom: 5px; 
+}
+.sub_title_box .kr_desc{
+    color: #aaa;
+    font-weight: 500;
+    font-size:18px;
+}
+.list_item{
+    border-bottom: 1px solid #ddd;
+    padding: 60px 0;
+}
+.list_item:last-child{
+    border-bottom: none;
+}
+.list_item .left{
+    width: 52%;
+}
+.list_item .right{
+    width: 45%;
+}
+.list_item .text{
+    font-size:18px;
+    margin-left: 8px;
+}
+.list_item .flex{
+    margin: 8px 0;
+}
+.list_item .title{
+    font-size:26px;
+    color: #2F6633;
+    margin-bottom: 16px;
+}
+.list_item .card_icon{
+    width: 32px;
+}
+.google_maps_btn{
+    border: 2px solid #4F6C0F;
+    width: 240px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-radius: 8px;
+    color: #4F6C0F;
+    align-items: center;
+    justify-content: center;
+}
+.google_maps_btn.flex{
+    margin-top: 30px;
+}
+.google_maps_btn img{
+    width: 36px;
+    margin-right: 8px;
+}
+.store_img{
+    width: 100%;
+    height: 0;
+    padding-bottom: 65%;
+    overflow: hidden;
+    position: relative;
+}
+.store_img img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.no_data{
+    text-align:center;
+    padding: 40px 0;
+    font-size:20px;
+    color: #999;
+}
+
+@media screen and (max-width:1028px) {
+    .sub_title_box.row{
+        padding: 30px;
+    }
+    .list_item{
+        padding: 60px 30px;
+    }
+}
+@media screen and (max-width:768px){
+    .list_item.row{
+        flex-direction: column;
+    }
+    .list_item .left, 
+    .list_item .right{
+        width: 100%;
+    }
+    .list_item .right{
+        margin-top: 30px;
+    }
+    .google_maps_btn{
+        width: 300px;
+    }
+}
+@media screen and (max-width:480px){    
+    .logo_box{
+        left: 20px;
+        transform: initial;
+    }
+    .sub_conatiner{
+        padding-top: 60px;
+    }
+    .sub_title_box{
+        grid-template-columns: 56px 1fr;
+    }
+    .sub_title_box .sub_title{
+        font-size: 26px;
+    }
+    .sub_title_box .kr_desc{
+        font-size:16px;
+    }
+    .list_item .card_icon{
+        width: 24px;
+    }
+    .google_maps_btn{
+        width: 100%;
+        font-size:16px;
+        padding: 8px 0;
+        border-width: 1px;
+    }
+    .list_item .title{
+        font-size:22px;
+    }
+    .list_item .text{
+        font-size:16px;
+    }
+    .google_maps_btn img{
+        width: 32px;;
+    }
+}

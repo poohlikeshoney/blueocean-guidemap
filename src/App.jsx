@@ -25,7 +25,6 @@ function App() {
   return (
     <div className="App">
       <Appbar></Appbar>
-      <MainBeanner></MainBeanner>
       <Routes>
         <Route
           path="/"
