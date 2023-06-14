@@ -1,7 +1,7 @@
 {
   "name": "blueocean-guidemap",
   "version": "1.0.0",
-  "type":"module",
+  "type": "module",
   "description": "hotel guidemap",
   "main": "server.js",
   "scripts": {
@@ -12,7 +12,8 @@
   "dependencies": {
     "express": "^4.18.2",
     "morgan": "^1.10.0",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6"
   },
   "devDependencies": {
     "@babel/core": "^7.22.1",
