@@ -68,6 +68,7 @@ header.dark {
     position:absolute;
     left: 50%;
     transform:translateX(-50%);
+    cursor: pointer;
 }
 .hamburger_menu{
     font-size: 24px;
@@ -153,6 +154,7 @@ footer{
 }
 .sidebar_menu .menu_item{
     padding: 8px 0;
+    cursor: pointer;
 }
 .sidebar_menu .menu_item .flex{
     align-items: center;

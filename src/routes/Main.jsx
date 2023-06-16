@@ -1,16 +1,18 @@
 import {pageData} from "../data"
 import CardItem from "./CardItem"
+import Header from "../layout/Header";
 
 function Main() {
 
 	return (
 		<>
-            <div className="maig_bg_box">
+			<Header></Header>
+			<div className="maig_bg_box">
 				<div className="overlay"/>
 				<img
 					className="main_bg_img"
 					src="/img/main_bg.jpg"
-					alt="배경이미지, 산에서 자라는 과실나무들."
+					alt="배경이미지, 블루 오션 호텔 이미지"
 				/>
 				<div className="text_box">
 					<h4>Blue Ocean Residence Hotel</h4>

@@ -1,18 +1,102 @@
 export const pageData = [
+  // 레스토랑
   {
     img:"/img/icons/restaurant.png",
     title:"Restaurant",
     desc: "레스토랑",
     url:"restaurant",
-    data:[]
+    data:[
+      // 식당
+      {
+        filter:"restaurant",
+        id:0,
+        title: '온센',
+        openingHours: '11:00-20:30',
+        openingHoursMemo: '무휴',
+        address: '인천 중구 영종대로911',
+        img: '',
+        menu:"텐동",
+        googleMaps: '',
+        contact:"032-214-5100",
+        reservation:"",
+        room:"",
+        distance:"0m",
+        memo:"",
+      },
+      // 카페
+      {
+        filter:"cafe",
+        id:0,
+        title: '카페평상인',
+        openingHours: '10:00-22:00',
+        openingHoursMemo: '무휴',
+        address: '인천 중구 영종진광장로 39 오션테라스 카페 평상인',
+        img: '',
+        menu:"아메리카노 5,500",
+        googleMaps: '',
+        contact:"0507-1425-0079",
+        reservation:"",
+        room:"",
+        distance:"2.9km",
+        memo:"",
+      },
+      // 조식
+      {
+        filter:"breakfast",
+        id:0,
+        title: '파리바게트영종현대',
+        openingHours: '10:00-22:00',
+        openingHoursMemo: '',
+        address: '인천 중구 하늘별빛로65번길 7-4(중산동) 현대프라자',
+        img: '',
+        menu:"",
+        googleMaps: '',
+        contact:"032-746-0707",
+        reservation:"",
+        room:"",
+        distance:"390m",
+        memo:"",
+      },
+
+    ]
   },  
+  // 편의점
   {
     img:"/img/icons/convenience_store.png",
     title:"convenience_store",
     desc: "편의점",
     url:"convenience-store",
-    data:[]
-  },  
+    data:[
+      {
+        id:0,
+        title: 'CU영종블루오션점',
+        openingHours: '01:00-24:00',
+        openingHoursMemo: '',
+        address: '인천 중구 영종대로 911',
+        img: '/img/convenience_store/cu.jpg',
+        googleMaps: '',
+      },
+      {
+          id:1,
+          title: '미니스톱 영종웰메이드점',
+          openingHours: '01:00-24:00',
+          openingHoursMemo: '',
+          address: '인천 중구 하늘별빛로65번길 7-11',
+          img: '/img/convenience_store/ministop.jpg',
+          googleMaps: '',
+      },
+      {
+          id:2,
+          title: 'GS25 영종리베라점',
+          openingHours: '01:00-24:00',
+          openingHoursMemo: '',
+          address: '인천 중구 영종대로 881 1층 103호',
+          img: '/img/convenience_store/gs.jpg',
+          googleMaps: '',
+      }
+    ]
+  },
+  // 약국  
   {
     img:"/img/icons/pharmacy.png",
     title:"Pharmacy",
@@ -48,13 +132,15 @@ export const pageData = [
       }
     ]
   },  
+  // 병원
   {
     img:"/img/icons/hospital.png",
     title:"hospital",
     desc: "병원",
     url: "hospital",
     data:[]
-  },  
+  },
+  // 생활용품 판매점  
   {
     img:"/img/icons/household_goods_store.png",
     title:"household goods store",
@@ -62,13 +148,34 @@ export const pageData = [
     url: "household",
     data:[]
   },  
+  // 코인세탁소
   {
     img:"/img/icons/coin_laundry.png",
     title:"coin laundry",
     desc: "코인세탁소",
     url: "coin-laundry",
-    data:[]
+    data:[
+      {
+        id:0,
+        title: '버블맨24 인천영종도점',
+        openingHours: '00:00-24:00',
+        openingHoursMemo: '',
+        address: '인천 중구 자연대로 28 101호 셀프빨래방',
+        img: '/img/coin_laundry/l_0.jpg',
+        googleMaps: '',
+      },
+      {
+          id:1,
+          title: '화이트365 영종도점',
+          openingHours: '00:00-24:00',
+          openingHoursMemo: '',
+          address: '인천 중구 자연대로 37 스카이가든 1층 107호',
+          img: '/img/coin_laundry/l_1.jpg',
+          googleMaps: '',
+      },
+    ]
   },  
+  // 환전소
   {
     img:"/img/icons/exchange.png",
     title:"exchange",
@@ -76,6 +183,7 @@ export const pageData = [
     url: "exchange",
     data:[]
   },  
+  // 관광지
   {
     img:"/img/icons/tourist.png",
     title:"tourist",

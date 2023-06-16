@@ -1,4 +1,4 @@
-header{
+.sub_header{
     background-color: #2F6633;
 }
 .sub_conatiner{
@@ -17,13 +17,13 @@ header{
     grid-template-columns: 72px 1fr;
     align-items: center;
     gap: 16px;
-    padding: 30px 20px;
+    padding: 20px 20px;
 }
 .sub_title_box .sub_title{
     font-size: 34px;
     font-weight: 600;
     color: #2f6633;
-    margin-bottom: 5px; 
+    margin-bottom: 3px; 
 }
 .sub_title_box .kr_desc{
     color: #aaa;
@@ -55,10 +55,17 @@ header{
     color: #2F6633;
     margin-bottom: 16px;
 }
+.list_item[data-filter="cafe"] .title{
+    color: #679600
+}
+.list_item[data-filter="breakfast"] .title{
+    color: #dd7e00
+}
 .list_item .card_icon{
     width: 32px;
 }
 .google_maps_btn{
+    display:flex;
     border: 2px solid #4F6C0F;
     width: 240px;
     font-size: 18px;
@@ -70,7 +77,7 @@ header{
     justify-content: center;
 }
 .google_maps_btn.flex{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .google_maps_btn img{
     width: 36px;
@@ -91,11 +98,33 @@ header{
     height: 100%;
     object-fit: contain;
 }
+.main_menu{
+    margin-top: 8px;
+}
 .no_data{
     text-align:center;
     padding: 40px 0;
     font-size:20px;
     color: #999;
+}
+.filter_btn_box{
+    display:flex;
+    align-items: center;
+    padding: 20px 20px 0;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.filter_btn_box .filter_btn{
+    padding: 0 18px;
+    border: 1px solid #2F6633;
+    height: 32px;
+    line-height: 30px;
+    border-radius: 32px;
+    font-weight: 500;
+}
+.filter_btn_box .filter_btn.active{
+    background-color: #2F6633;
+    color: white;
 }
 
 @media screen and (max-width:1028px) {
@@ -103,7 +132,7 @@ header{
         padding: 30px;
     }
     .list_item{
-        padding: 60px 30px;
+        padding: 30px 20px;
     }
 }
 @media screen and (max-width:768px){
@@ -115,25 +144,21 @@ header{
         width: 100%;
     }
     .list_item .right{
-        margin-top: 30px;
+        margin-top: 20px;
     }
     .google_maps_btn{
         width: 300px;
     }
 }
-@media screen and (max-width:480px){    
-    .logo_box{
-        left: 20px;
-        transform: initial;
-    }
+@media screen and (max-width:480px){   
     .sub_conatiner{
         padding-top: 60px;
     }
     .sub_title_box{
-        grid-template-columns: 56px 1fr;
+        grid-template-columns: 50px 1fr;
     }
     .sub_title_box .sub_title{
-        font-size: 26px;
+        font-size: 24px;
     }
     .sub_title_box .kr_desc{
         font-size:16px;
@@ -146,12 +171,13 @@ header{
         font-size:16px;
         padding: 8px 0;
         border-width: 1px;
+        margin-top: 16px;
     }
     .list_item .title{
-        font-size:22px;
+        font-size:20px;
     }
     .list_item .text{
-        font-size:16px;
+        font-size:15px;
     }
     .google_maps_btn img{
         width: 32px;;
