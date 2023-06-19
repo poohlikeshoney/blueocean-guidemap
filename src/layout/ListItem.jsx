@@ -3,7 +3,28 @@ function ListItem(props){
     return(
         <div className="list_item row" data-filter={item.filter}>
             <div className="left">
-                <h4 className="title">{item.title}</h4>
+                <div className='flex'>
+                    <h4 className="title">{item.title}</h4>
+                    {
+                        item.sale ?
+                        <p className="sale">{item.sale} OFF</p>
+                        : null
+                    }
+                </div>
+                {
+                    item.menu ?
+                        <div className="menu flex">
+                            <img
+                                className="card_icon"
+                                src="/img/icons/menu_icon.png"
+                                alt="메뉴 아이콘"
+                                />
+                            <p className="text">
+                                {item.menu}
+                            </p>
+                        </div>
+                    : null
+                }     
                 <div className="opening_hour flex">
                     <img
                         className="card_icon"
@@ -28,17 +49,7 @@ function ListItem(props){
                             </p>
                         </div>
                     : null
-                }
-                <div className="address flex">
-                    <img
-                        className="card_icon"
-                        src="/img/icons/location_icon.png"
-                        alt="주소 아이콘"
-                        />
-                    <p className="text">
-                        {item.address}
-                    </p>
-                </div>
+                }                
                 {
                     item.contact ?
                         <div className="contact flex">
@@ -53,6 +64,16 @@ function ListItem(props){
                         </div>
                     : null
                 }
+                {/* <div className="address flex">
+                    <img
+                        className="card_icon"
+                        src="/img/icons/location_icon.png"
+                        alt="주소 아이콘"
+                        />
+                    <p className="text">
+                        {item.address}
+                    </p>
+                </div> */}
                 <a className="google_maps_btn" target="_blank" href={item.googleMaps}>
                     <img
                         src="/img/icons/google_maps_icon_circle.png"
@@ -69,7 +90,6 @@ function ListItem(props){
                     : <img src="/img/icons/no_img.png" alt="no img" /> 
                 }
                 </div>
-                <div className="main_menu"> {item.menu ? item.menu : ""}</div>
             </div>
         </div>      
     )

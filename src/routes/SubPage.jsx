@@ -3,7 +3,16 @@ import SubHeader from "../layout/SubHeader"
 
 function SubPage(props) {
     const item = props.item;
-    
+    if(item.url === 'restaurant'){
+        item.data.sort((a, b) => {
+            if (a.sale && !b.sale) {
+              return -1;
+            } else if (!a.sale && b.sale) {
+              return 1; 
+            }
+            return 0;
+        });
+    }
     function handleFilter(e){
         const filterBtn = document.querySelectorAll('.filter_btn');
         const listItem = document.querySelectorAll('.list_item');
@@ -44,7 +53,10 @@ function SubPage(props) {
             <div className="content_box list_item_box">
 
             {
-                item.url === 'restaurant' ? <TabMenu filterFunc={handleFilter}></TabMenu> : null
+                item.url === 'restaurant' ? <RestaurantTabMenu filterFunc={handleFilter}></RestaurantTabMenu> : null
+            }
+            {
+                item.url === 'hospital' ? <HospitalTabMenu filterFunc={handleFilter}></HospitalTabMenu> : null
             }
             {
                 item.data.map((item, idx) => (
@@ -58,13 +70,23 @@ function SubPage(props) {
         </>
     );
 }
-function TabMenu(props){
+function RestaurantTabMenu(props){
     return(
         <div className="filter_btn_box">
             <div data-filter="all" className="filter_btn active" onClick={props.filterFunc}>전체</div>
             <div data-filter="restaurant" className="filter_btn" onClick={props.filterFunc}>식당</div>
             <div data-filter="cafe" className="filter_btn" onClick={props.filterFunc}>카페</div>
             <div data-filter="breakfast" className="filter_btn" onClick={props.filterFunc}>조식</div>
+        </div>
+    )
+}
+function HospitalTabMenu(props){
+    return(
+        <div className="filter_btn_box">
+            <div data-filter="all" className="filter_btn active" onClick={props.filterFunc}>전체</div>
+            <div data-filter="internal_medicine" className="filter_btn" onClick={props.filterFunc}>내과</div>
+            <div data-filter="dentist" className="filter_btn" onClick={props.filterFunc}>치과</div>
+            <div data-filter="Ophthalmology" className="filter_btn" onClick={props.filterFunc}>안과</div>
         </div>
     )
 }

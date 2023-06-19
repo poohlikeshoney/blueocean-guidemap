@@ -53,13 +53,48 @@
 .list_item .title{
     font-size:26px;
     color: #2F6633;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 .list_item[data-filter="cafe"] .title{
     color: #679600
 }
 .list_item[data-filter="breakfast"] .title{
     color: #dd7e00
+}
+.list_item .sale{
+    font-size: 14px;
+    margin-bottom: 8px;
+    background-color: #00968b;
+    color: white;
+    padding: 6px 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    position: relative;
+    font-weight: 600;
+}
+.list_item .sale::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: white;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+}
+.list_item .sale::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: white;
+    top: 50%;
+    right: -5px;
+    transform: translateY(-50%);
 }
 .list_item .card_icon{
     width: 32px;
@@ -117,9 +152,9 @@
 .filter_btn_box .filter_btn{
     padding: 0 18px;
     border: 1px solid #2F6633;
-    height: 32px;
-    line-height: 30px;
-    border-radius: 32px;
+    height: 36px;
+    line-height: 36px;
+    border-radius: 36px;
     font-weight: 500;
 }
 .filter_btn_box .filter_btn.active{
