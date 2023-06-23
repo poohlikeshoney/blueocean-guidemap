@@ -1,3 +1,6 @@
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/opacity.css';
+
 function ListItem(props){
     let item = props.item;
     return(
@@ -7,7 +10,7 @@ function ListItem(props){
                     <h4 className="title">{item.title}</h4>
                     {
                         item.sale ?
-                        <p className="sale">{item.sale} OFF</p>
+                        <p className="sale">{item.sale}% OFF</p>
                         : null
                     }
                 </div>
@@ -86,7 +89,12 @@ function ListItem(props){
                 <div className="store_img">
                 {
                     item.img ? 
-                        <img src={item.img} alt={item.title} />
+                        <LazyLoadImage
+                            src={item.img}
+                            alt={item.title}
+                            effect="opacity"
+                            className="img"
+                        />
                     : <img src="/img/icons/no_img.png" alt="no img" /> 
                 }
                 </div>

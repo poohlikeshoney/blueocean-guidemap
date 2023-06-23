@@ -5,12 +5,10 @@ function SubPage(props) {
     const item = props.item;
     if(item.url === 'restaurant'){
         item.data.sort((a, b) => {
-            if (a.sale && !b.sale) {
-              return -1;
-            } else if (!a.sale && b.sale) {
-              return 1; 
-            }
-            return 0;
+            const saleA = a.sale ? parseInt(a.sale) : -Infinity;
+            const saleB = b.sale ? parseInt(b.sale) : -Infinity;
+          
+            return b.sale ? saleB - saleA : a.sale ? -1 : 0;
         });
     }
     function handleFilter(e){
@@ -76,7 +74,6 @@ function RestaurantTabMenu(props){
             <div data-filter="all" className="filter_btn active" onClick={props.filterFunc}>전체</div>
             <div data-filter="restaurant" className="filter_btn" onClick={props.filterFunc}>식당</div>
             <div data-filter="cafe" className="filter_btn" onClick={props.filterFunc}>카페</div>
-            <div data-filter="breakfast" className="filter_btn" onClick={props.filterFunc}>조식</div>
         </div>
     )
 }

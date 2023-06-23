@@ -125,7 +125,7 @@
     overflow: hidden;
     position: relative;
 }
-.store_img img{
+.store_img .img{
     position: absolute;
     top: 0;
     left: 0;
