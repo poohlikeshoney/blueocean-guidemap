@@ -32,15 +32,6 @@ function App() {
     };
   }, []);
 
-  // pageData.find(item => item.url === "restaurant").data.sort((a, b) => {
-  //     if (a.sale && !b.sale) {
-  //       return -1;
-  //     } else if (!a.sale && b.sale) {
-  //       return 1; 
-  //     }
-  //     return 0;
-  // });
-
   return (
     <div className="App">
 			<div className='container'>
