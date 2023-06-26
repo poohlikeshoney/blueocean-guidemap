@@ -46,9 +46,14 @@
 .list_item .text{
     font-size:18px;
     margin-left: 8px;
+    line-height: 32px;
 }
 .list_item .flex{
     margin: 8px 0;
+    align-items: start;
+}
+.list_item .break_time{
+    font-size: 14px;
 }
 .list_item .title{
     font-size:26px;
@@ -153,7 +158,7 @@
     padding: 0 18px;
     border: 1px solid #2F6633;
     height: 36px;
-    line-height: 36px;
+    line-height: 34px;
     border-radius: 36px;
     font-weight: 500;
 }
@@ -213,6 +218,7 @@
     }
     .list_item .text{
         font-size:15px;
+        line-height: 24px;
     }
     .google_maps_btn img{
         width: 32px;;

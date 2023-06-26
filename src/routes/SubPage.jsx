@@ -53,9 +53,9 @@ function SubPage(props) {
             {
                 item.url === 'restaurant' ? <RestaurantTabMenu filterFunc={handleFilter}></RestaurantTabMenu> : null
             }
-            {
+            {/* {
                 item.url === 'hospital' ? <HospitalTabMenu filterFunc={handleFilter}></HospitalTabMenu> : null
-            }
+            } */}
             {
                 item.data.map((item, idx) => (
                     <ListItem item={item} key={idx}></ListItem>
@@ -71,9 +71,9 @@ function SubPage(props) {
 function RestaurantTabMenu(props){
     return(
         <div className="filter_btn_box">
-            <div data-filter="all" className="filter_btn active" onClick={props.filterFunc}>전체</div>
-            <div data-filter="restaurant" className="filter_btn" onClick={props.filterFunc}>식당</div>
-            <div data-filter="cafe" className="filter_btn" onClick={props.filterFunc}>카페</div>
+            <div data-filter="all" className="filter_btn active" onClick={props.filterFunc}>все</div>
+            <div data-filter="restaurant" className="filter_btn" onClick={props.filterFunc}>ресторан</div>
+            <div data-filter="cafe" className="filter_btn" onClick={props.filterFunc}>кафе</div>
         </div>
     )
 }

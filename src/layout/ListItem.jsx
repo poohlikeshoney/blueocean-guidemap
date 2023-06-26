@@ -15,6 +15,20 @@ function ListItem(props){
                     }
                 </div>
                 {
+                    item.subject ?
+                        <div className="menu flex">
+                            <img
+                                className="card_icon"
+                                src="/img/icons/hospital_icon.png"
+                                alt="진료과목 아이콘"
+                                />
+                            <p className="text">
+                                {item.subject}
+                            </p>
+                        </div>
+                    : null
+                }    
+                {
                     item.menu ?
                         <div className="menu flex">
                             <img
@@ -28,17 +42,30 @@ function ListItem(props){
                         </div>
                     : null
                 }     
-                <div className="opening_hour flex">
-                    <img
-                        className="card_icon"
-                        src="/img/icons/opening_hours_icon.png"
-                        alt="영업시간 아이콘"
-                        />
-                    <p className="text">
-                        {item.openingHours}
-                        <span>{item.openingHoursMemo ? `(${item.openingHoursMemo})` : ""}</span>
-                    </p>
-                </div>   
+                {
+                    item.openingHours ? 
+                        <div className="opening_hour flex">
+                            <img
+                                className="card_icon"
+                                src="/img/icons/opening_hours_icon.png"
+                                alt="영업시간 아이콘"
+                                />
+                            <p className="text">
+                                <p>
+                                    {item.openingHours}
+                                    {item.openingHoursMemo ? `(${item.openingHoursMemo})` : ""}
+                                </p>
+                                {
+                                    item.breakTime ? 
+                                    <p className='break_time'>
+                                        * Break Time : {item.breakTime}
+                                    </p>
+                                    : null
+                                }
+                            </p>
+                        </div>   
+                    : null
+                }
                 {
                     item.contact ?
                         <div className="contact flex">
@@ -54,7 +81,7 @@ function ListItem(props){
                     : null
                 }                
                 {
-                    item.contact ?
+                    item.distance ?
                         <div className="contact flex">
                             <img
                                 className="card_icon"
@@ -67,16 +94,20 @@ function ListItem(props){
                         </div>
                     : null
                 }
-                {/* <div className="address flex">
-                    <img
-                        className="card_icon"
-                        src="/img/icons/location_icon.png"
-                        alt="주소 아이콘"
-                        />
-                    <p className="text">
-                        {item.address}
-                    </p>
-                </div> */}
+                {
+                    item.memo ?
+                        <div className="memo flex">
+                            <img
+                                className="card_icon"
+                                src="/img/icons/memo_icon.png"
+                                alt="메모 아이콘"
+                                />
+                            <p className="text">
+                                {item.memo}
+                            </p>
+                        </div>
+                    : null
+                }
                 <a className="google_maps_btn" target="_blank" href={item.googleMaps}>
                     <img
                         src="/img/icons/google_maps_icon_circle.png"
@@ -94,6 +125,7 @@ function ListItem(props){
                             alt={item.title}
                             effect="opacity"
                             className="img"
+                            placeholderSrc="img/icons/loading.gif"
                         />
                     : <img src="/img/icons/no_img.png" alt="no img" /> 
                 }
