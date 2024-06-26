@@ -74,9 +74,9 @@ function ListItem(props){
                                 src="/img/icons/contact_icon.png"
                                 alt="전화 아이콘"
                                 />
-                            <p className="text">
+                            <a href={`tel:${item.contact}`} className="text">
                                 {item.contact}
-                            </p>
+                            </a>
                         </div>
                     : null
                 }                
